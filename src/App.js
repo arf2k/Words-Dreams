@@ -1,10 +1,14 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
+import WordFetch from './components/word-fetch/WordFetch';
 
 function App() {
   return (
+    <>
    <h1>Words and Dreams</h1>
-  )
+   <WordFetch/>   
+   </>
+   )
+
 
 }
 
