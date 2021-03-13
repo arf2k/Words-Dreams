@@ -7,10 +7,15 @@ const INITIAL_STATE = {
 const wordsReducer = (state = INITIAL_STATE, action ) => {
 switch(action.type){ 
      case WordsActionTypes.SET_WORD:
-          return{
-               ...state,
-               wordData: [...state, action.payload]
+          if(state.wordData.length > 0){
+               return true
           }
+     case WordsActionTypes.RENDER_WORD:
+          return {
+               ...state,
+               wordData: [action.payload]
+          }
+
      default:
      return state
 }
